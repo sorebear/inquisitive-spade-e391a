@@ -1,0 +1,14 @@
+<section id="banner">
+    <div class="content">
+        <header class="major special">
+            <h1>{{ replace .Site.Params.banner.title "\n" "<br />" | safeHTML }}</h1>
+        </header>
+        {{ if .Site.Params.banner.actions }}
+        <ul class="actions special">
+            {{ range $action := .Site.Params.banner.actions }}
+                <li><a href="{{ if strings.HasPrefix $action.url "#" }}{{ $action.url }}{{ else }}{{ relref $ $action.url | relURL }}{{ end }}" class="button wide{{ if $action.is_primary }} primary{{ end }}{{ if $action.is_scrolly }} scrolly{{ end }}">{{ $action.label }}</a></li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </div>
+</section>

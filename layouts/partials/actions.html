@@ -1,0 +1,13 @@
+<div class="inner">
+    <header class="major special alt">
+        <h2>{{ .section.title }}</h2>
+        {{ partial "markdownify-block" .section.subtitle }}
+    </header>
+    {{ if .section.actions }}
+    <ul class="actions special">
+        {{ range $action := .section.actions }}
+            <li><a href="{{ if strings.HasPrefix $action.url "#" }}{{ $action.url }}{{ else }}{{ relref $.page $action.url | relURL }}{{ end }}" class="button wide{{ if $action.is_primary }} primary{{ end }}{{ if $action.is_scrolly }} scrolly{{ end }}">{{ $action.label }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>

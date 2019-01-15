@@ -1,0 +1,29 @@
+<div class="inner">
+    <header class="major special">
+        <h2>{{ .section.title }}</h2>
+        {{ partial "markdownify-block" .section.subtitle }}
+    </header>
+    <div class="features">
+        <ul>
+            {{ range $entry := .section.features.left_section }}
+                <li>
+                    <span class="icon alt major {{ $entry.icon }}"></span>
+                    <h3>{{ $entry.title }}</h3>
+                    {{ partial "markdownify-block" $entry.text }}
+                </li>
+            {{ end }}
+        </ul>
+        {{ if .section.features.img_path }}
+            <span class="image"><img src="{{ .section.features.img_path | relURL }}" alt="" /></span>
+        {{ end }}
+        <ul>
+            {{ range $entry := .section.features.right_section }}
+                <li>
+                    <span class="icon alt major {{ $entry.icon }}"></span>
+                    <h3>{{ $entry.title }}</h3>
+                    {{ partial "markdownify-block" $entry.text }}
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
