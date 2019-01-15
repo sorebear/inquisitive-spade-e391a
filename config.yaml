@@ -1,92 +1,93 @@
+---
 title: Hyperbolic
-baseURL: /
+baseURL: "/"
 params:
   palette: blue
   palettes:
     blue:
       sass:
-        accent1: '#4797ec'
-        accent2: '#884beb'
+        accent1: "#4797ec"
+        accent2: "#884beb"
     green:
       sass:
-        accent1: '#31d79b'
-        accent2: '#4b76eb'
+        accent1: "#31d79b"
+        accent2: "#4b76eb"
     orange:
       sass:
-        accent1: '#f54a6f'
-        accent2: '#debf55'
+        accent1: "#f54a6f"
+        accent2: "#debf55"
   footer:
     social_links:
-      - title: Twitter
-        icon: fa-twitter
-        link_url: '#'
-      - title: Facebook
-        icon: fa-facebook
-        link_url: '#'
-      - title: Instagram
-        icon: fa-instagram
-        link_url: '#'
-      - title: Email
-        icon: fa-envelope-o
-        link_url: '#'
-      - title: Phone
-        icon: fa-phone
-        link_url: '#'
-    copyright: '&copy; Hyperbolic. All rights reserved.'
+    - title: Twitter
+      icon: fa-twitter
+      link_url: "#"
+    - title: Facebook
+      icon: fa-facebook
+      link_url: "#"
+    - title: Instagram
+      icon: fa-instagram
+      link_url: "#"
+    - title: Email
+      icon: fa-envelope-o
+      link_url: "#"
+    - title: Phone
+      icon: fa-phone
+      link_url: "#"
+    copyright: "&copy; Hyperbolic. All rights reserved."
   banner:
     title: |-
-      Ipsum dolor eu magna
-      consequat lorem
+      Experiment with Wonder
+      Transformational Coaching to Explore Life's Possibilities
     actions:
-      - label: Get Started
-        url: '#first'
-        is_primary: true
-        is_scrolly: true
+    - label: Get Started
+      url: "#first"
+      is_primary: true
+      is_scrolly: true
 menu:
   main:
-    - identifier: dropdown
-      url: '#'
-      weight: 2
-      name: Dropdown
-    - weight: 1
-      url: '#'
-      identifier: dropdown_1
-      name: Option One
-      parent: dropdown
-    - weight: 2
-      url: '#'
-      identifier: dropdown_2
-      name: Option Two
-      parent: dropdown
-    - weight: 3
-      url: '#'
-      identifier: dropdown_3
-      name: Option Three
-      parent: dropdown
-    - identifier: submenu
-      weight: 4
-      url: '#'
-      name: Submenu
-      parent: dropdown
-    - url: '#'
-      weight: 1
-      identifier: submenu_1
-      name: Option One
-      parent: submenu
-    - url: '#'
-      weight: 2
-      identifier: submenu_2
-      name: Option Two
-      parent: submenu
-    - url: '#'
-      weight: 3
-      identifier: submenu_3
-      name: Option Three
-      parent: submenu
-    - url: '#'
-      weight: 4
-      identifier: submenu_4
-      name: Option Four
-      parent: submenu
+  - identifier: dropdown
+    url: "#"
+    weight: 2
+    name: Dropdown
+  - weight: 1
+    url: "#"
+    identifier: dropdown_1
+    name: Option One
+    parent: dropdown
+  - weight: 2
+    url: "#"
+    identifier: dropdown_2
+    name: Option Two
+    parent: dropdown
+  - weight: 3
+    url: "#"
+    identifier: dropdown_3
+    name: Option Three
+    parent: dropdown
+  - identifier: submenu
+    weight: 4
+    url: "#"
+    name: Submenu
+    parent: dropdown
+  - url: "#"
+    weight: 1
+    identifier: submenu_1
+    name: Option One
+    parent: submenu
+  - url: "#"
+    weight: 2
+    identifier: submenu_2
+    name: Option Two
+    parent: submenu
+  - url: "#"
+    weight: 3
+    identifier: submenu_3
+    name: Option Three
+    parent: submenu
+  - url: "#"
+    weight: 4
+    identifier: submenu_4
+    name: Option Four
+    parent: submenu
 disableKinds:
-  - RSS
+- RSS
