@@ -1,30 +1,31 @@
 ---
 label: Page
+hide_body: false
 is_partial: false
 fields:
-  - type: text
-    name: title
-    label: Page Title
-    config:
-      required: true
-  - type: textarea
-    name: subtitle
-    label: Page Subtitle
-    description: The text displayed below the page title
-    config:
-      wysiwyg: true
-      schema:
-        format: markdown
-  - type: file
-    name: img_path
-    label: Content Image
-    description: The image displayed in the page content
-  - type: text
-    name: layout
-    label: Layout
-    hidden: true
-    default: page
-    config:
-      required: true
+- type: text
+  name: title
+  label: Page Title
+  config:
+    required: true
+- type: textarea
+  name: subtitle
+  label: Page Subtitle
+  description: The text displayed below the page title
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: file
+  name: img_path
+  label: Content Image
+  description: The image displayed in the page content
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: page
+  config:
+    required: true
 pages:
-  - generic.md
+- content/generic.md

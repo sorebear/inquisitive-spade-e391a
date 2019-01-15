@@ -4,52 +4,52 @@ hide_body: true
 is_partial: true
 display_field: title
 fields:
+- type: textarea
+  name: subtitle
+  label: Section Subtitle
+  description: The text displayed below the section title
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: text
+  name: title
+  label: Section Title
+  description: The title of the section
+  default: Magna feugiat
+  config:
+    required: true
+- type: text
+  name: section_id
+  label: Section ID
+  default: first
+- type: field_group_list
+  name: home_spotlights
+  label: Home Spotlights
+  description: A list of home spotlights
+  config:
+    labelField: title
+  fields:
+  - type: text
+    name: title
+    label: Spotlight Title
+    config:
+      required: true
+  - type: file
+    name: img_path
+    label: Spotlight Image
+    description: The image displayed beside the spotlight entry
   - type: textarea
-    name: subtitle
-    label: Section Subtitle
-    description: The text displayed below the section title
+    name: text
+    label: Spotlight Text
     config:
       wysiwyg: true
       schema:
         format: markdown
-  - type: text
-    name: title
-    label: Section Title
-    description: The title of the section
-    default: Magna feugiat
-    config:
-      required: true
-  - type: text
-    name: section_id
-    label: Section ID
-    default: first
-  - type: field_group_list
-    name: home_spotlights
-    label: Home Spotlights
-    description: A list of home spotlights
-    config:
-      labelField: title
-    fields:
-      - type: text
-        name: title
-        label: Spotlight Title
-        config:
-          required: true
-      - type: file
-        name: img_path
-        label: Spotlight Image
-        description: The image displayed beside the spotlight entry
-      - type: textarea
-        name: text
-        label: Spotlight Text
-        config:
-          wysiwyg: true
-          schema:
-            format: markdown
-  - type: text
-    name: component
-    label: Section Component
-    hidden: true
-    default: spotlight.html
-    config:
-      required: true
+- type: text
+  name: component
+  label: Section Component
+  hidden: true
+  default: spotlight.html
+  config:
+    required: true

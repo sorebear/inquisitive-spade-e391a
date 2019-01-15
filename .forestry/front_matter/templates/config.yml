@@ -3,99 +3,99 @@ label: Config
 hide_body: true
 is_partial: false
 fields:
-  - type: text
-    name: title
-    label: Title
-    description: Site title
+- type: text
+  name: title
+  label: Title
+  description: Site title
+  config:
+    required: true
+- type: field_group
+  name: params
+  label: Params
+  description: Site parameters
+  fields:
+  - type: select
+    name: palette
+    label: Color Palette
+    description: The color palette used by the page
     config:
       required: true
+      source:
+        type: custom
+      options:
+      - blue
+      - green
+      - orange
   - type: field_group
-    name: params
-    label: Params
-    description: Site parameters
+    name: footer
+    label: Footer Configuration
     fields:
-      - type: select
-        name: palette
-        label: Color Palette
-        description: The color palette used by the page
-        config:
-          required: true
-          source:
-            type: custom
-          options:
-            - blue
-            - green
-            - orange
-      - type: field_group
-        name: footer
-        label: Footer Configuration
-        fields:
-          - type: field_group_list
-            name: social_links
-            label: Social Media Icons
-            description: Social media Icons displayed in the page footer
-            config:
-              labelField: title
-            fields:
-              - type: text
-                name: title
-                label: Icon Title
-              - type: text
-                name: icon
-                label: Icon
-                description: Font Awesome icon
-              - type: text
-                name: link_url
-                label: Icon URL
-          - type: text
-            name: copyright
-            label: Footer Copyright
-            description: The copyright text displayed in the footer of the page
-      - type: field_group
-        name: banner
-        label: Banner Configuration
-        description: The banner displayed at the top of the home page
-        fields:
-          - type: textarea
-            name: title
-            label: Banner Title
-            description: The title displayed in the banner
-          - type: field_group_list
-            name: actions
-            label: Banner Action Buttons
-            config:
-              labelField: label
-            fields:
-              - type: include
-                name: include_action
-                label: Action
-                template: action
-      - type: field_group
-        name: palettes
-        label: Palettes
-        hidden: true
-        fields:
-          - type: field_group
-            name: blue
-            label: Blue
-            fields:
-              - type: include
-                name: include_palette
-                label: Palette
-                template: palette
-          - type: field_group
-            name: green
-            label: Green
-            fields:
-              - type: include
-                name: include_palette
-                label: Palette
-                template: palette
-          - type: field_group
-            name: orange
-            label: Orange
-            fields:
-              - type: include
-                name: include_palette
-                label: Palette
-                template: palette
+    - type: field_group_list
+      name: social_links
+      label: Social Media Icons
+      description: Social media Icons displayed in the page footer
+      config:
+        labelField: title
+      fields:
+      - type: text
+        name: title
+        label: Icon Title
+      - type: text
+        name: icon
+        label: Icon
+        description: Font Awesome icon
+      - type: text
+        name: link_url
+        label: Icon URL
+    - type: text
+      name: copyright
+      label: Footer Copyright
+      description: The copyright text displayed in the footer of the page
+  - type: field_group
+    name: banner
+    label: Banner Configuration
+    description: The banner displayed at the top of the home page
+    fields:
+    - type: textarea
+      name: title
+      label: Banner Title
+      description: The title displayed in the banner
+    - type: field_group_list
+      name: actions
+      label: Banner Action Buttons
+      config:
+        labelField: label
+      fields:
+      - type: include
+        name: include_action
+        label: Action
+        template: action
+  - type: field_group
+    name: palettes
+    label: Palettes
+    hidden: true
+    fields:
+    - type: field_group
+      name: blue
+      label: Blue
+      fields:
+      - type: include
+        name: include_palette
+        label: Palette
+        template: palette
+    - type: field_group
+      name: green
+      label: Green
+      fields:
+      - type: include
+        name: include_palette
+        label: Palette
+        template: palette
+    - type: field_group
+      name: orange
+      label: Orange
+      fields:
+      - type: include
+        name: include_palette
+        label: Palette
+        template: palette

@@ -1,14 +1,15 @@
 ---
 label: Palette
+hide_body: false
 is_partial: true
 fields:
-  - type: field_group
-    name: sass
-    label: SASS
-    fields:
-      - type: text
-        name: accent1
-        label: Accent1
-      - type: text
-        name: accent2
-        label: Accent2
+- type: field_group
+  name: sass
+  label: SASS
+  fields:
+  - type: text
+    name: accent1
+    label: Accent1
+  - type: text
+    name: accent2
+    label: Accent2
